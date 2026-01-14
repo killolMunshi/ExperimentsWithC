@@ -19,6 +19,6 @@ int main(int argc, char* argv[]) {
 	}
 	int avg = sum / n;
 	printf("\n Sum of the numbers is %d and average is %d", sum, avg);
-
+	free(myarr);
 	return 0;
 }
