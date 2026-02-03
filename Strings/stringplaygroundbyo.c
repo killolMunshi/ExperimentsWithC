@@ -27,6 +27,17 @@ bool my_strcmp(char* s1, char* s2) {
 	return true;
 }
 
+char * my_strcpy(char* dest, const char* src) {
+	char* originalDest = dest;
+	while (*src != '\0') {
+		*dest = *src;
+		dest++;
+		src++;
+	}
+	*dest = '\0'; // Null-terminate the destination string
+	return originalDest;
+}
+
 int main(int argc, char* argv[]) {
 
 	char* inputString;
@@ -69,6 +80,9 @@ int main(int argc, char* argv[]) {
 	} else {
 		printf("The strings are not equal.\n");
 	}
+
+	printf("Copying the first string to the second string...\n");
+	printf("%s\n", my_strcpy(inputString2, inputString));
 
 	free(inputString);
 	free(inputString2);
