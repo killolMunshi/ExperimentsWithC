@@ -16,6 +16,11 @@ clang main.c -o main.exe
 ./main.exe
 ```
 
+```powershell
+cl.exe .\main.c
+.\main.exe
+```
+
 ## Project Structure
 
 - `main.c` - Main entry point of the program
